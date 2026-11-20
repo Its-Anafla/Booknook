@@ -3,7 +3,7 @@
 Biblioteca pessoal, lista de desejos e registro de leitura. HTML + CSS + JavaScript puros (ES modules), sem frameworks, sem backend.
 
 ## Membros da equipe
-- Ana Flávia Peixoto, Giovane Cabral, Rafel Csizmar e Raphael Donizette
+- Ana Flávia Peixoto, Giovane Cabral, Rafael Csizmar e Raphael Donizette
 
 ## Organização
 ```
