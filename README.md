@@ -50,6 +50,5 @@ Extras: estante personalizável (fundo, madeira, paletas de lombada, cor por liv
 ## Declaração de uso de IA
 | Ferramenta | Utilizada para | Partes afetadas |
 |------------|----------------|-----------------|
-| **Gemini** | Depuração de erros de estilização. | Arquivo CSS 
-(`css/`) | 
+| **Gemini** | Depuração de erros de estilização. | Arquivo CSS (`css/`) | 
 | **Claude** | Revisão de código e auditoria de conformidade (verificação de requesitos obrigatórios e restrições do PDF) | Estrutura geral do código (`index.html`, `css/`, `js/`) |
