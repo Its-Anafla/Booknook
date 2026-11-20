@@ -1,0 +1,49 @@
+.site-header {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; align-items: center; gap: 28px;
+  padding: 10px clamp(16px, 4vw, 40px);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--accent); text-decoration: none; }
+.brand-name { font-family: var(--font-display); font-weight: 650; font-size: 1.5rem; letter-spacing: -0.02em; color: var(--text); }
+.nav { display: flex; gap: 4px; margin-left: auto; }
+.nav-link {
+  display: inline-flex; align-items: center; gap: 8px; padding: 0.5rem 0.9rem; border-radius: 999px;
+  color: var(--text-muted); text-decoration: none; font-weight: 500; font-size: 0.95rem;
+  transition: background-color 0.15s, color 0.15s;
+}
+.nav-link:hover { background: var(--accent-soft); color: var(--text); }
+.nav-link.is-active { background: var(--accent); color: var(--accent-ink); }
+
+#main { width: 100%; max-width: 1200px; margin: 0 auto; padding: 28px clamp(16px, 4vw, 40px) 64px; flex: 1; }
+
+.site-footer {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 18px clamp(16px, 4vw, 40px); border-top: 1px solid var(--line);
+  color: var(--text-faint); font-size: 0.9rem;
+}
+
+.page-header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.page-title { font-size: clamp(2rem, 4.5vw, 2.9rem); font-weight: 560; }
+.page-sub { margin-top: 4px; color: var(--text-muted); }
+.page-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.loading { padding: 40px 0; color: var(--text-muted); }
+.noscript { padding: 24px; }
+
+@media (max-width: 760px) {
+  /* backdrop-filter would turn the header into the containing block of the fixed bottom nav */
+  .site-header { justify-content: center; padding: 8px 16px; backdrop-filter: none; background: var(--bg); }
+  .nav {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; margin: 0; gap: 0;
+    display: grid; grid-template-columns: repeat(6, 1fr); height: var(--nav-h);
+    padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); height: calc(var(--nav-h) + env(safe-area-inset-bottom));
+    background: var(--surface); border-top: 1px solid var(--line);
+  }
+  .nav-link { flex-direction: column; justify-content: center; gap: 2px; padding: 4px 0; border-radius: 12px; font-size: 0.68rem; }
+  .nav-link.is-active { background: var(--accent-soft); color: var(--accent); }
+  #main { padding-bottom: calc(var(--nav-h) + 56px); }
+  .site-footer { padding-bottom: calc(var(--nav-h) + 20px); }
+}

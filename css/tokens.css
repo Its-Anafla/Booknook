@@ -1,0 +1,66 @@
+/* Design tokens. Everything else reads from these, so the graveyard page only has to swap a few values. */
+:root {
+  /* Linen, moss and walnut */
+  --linen: #efebdd;
+  --linen-deep: #e5dfca;
+  --paper: #f8f5ea;
+  --ink: #202d1d;
+  --ink-soft: #4a5a45;
+  --ink-faint: #75806f;
+  --moss: #456b3a;
+  --moss-deep: #2f4a28;
+  --moss-hover: #3a5b31;
+  --sage: #a9bd97;
+  --sage-soft: #dce6cf;
+  --walnut: #7a5233;
+  --walnut-deep: #523520;
+  --gold: #e2b15a;
+  --gold-deep: #b8832d;
+  --berry: #8f3a2d;
+
+  /* Semantic roles */
+  --bg: var(--linen);
+  --surface: var(--paper);
+  --surface-2: #f1edde;
+  --field: #fffdf6;
+  --text: var(--ink);
+  --text-muted: var(--ink-soft);
+  --text-faint: var(--ink-faint);
+  --line: rgba(32, 45, 29, 0.14);
+  --line-strong: rgba(32, 45, 29, 0.3);
+  --accent: var(--moss);
+  --accent-hover: var(--moss-hover);
+  --accent-ink: #f7f4e8;
+  --accent-soft: rgba(69, 107, 58, 0.14);
+  --danger: var(--berry);
+  --focus: var(--gold-deep);
+
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 22px;
+  --nav-h: 64px;
+  --shadow-soft: 0 12px 30px -18px rgba(40, 52, 30, 0.45);
+}
+
+/* The graveyard page turns the lights down. */
+body[data-view='graveyard'] {
+  --bg: #121512;
+  --surface: #1b201c;
+  --surface-2: #232923;
+  --field: #141814;
+  --text: #e7e4d3;
+  --text-muted: #b2b8a6;
+  --text-faint: #858d7f;
+  --line: rgba(231, 228, 211, 0.15);
+  --line-strong: rgba(231, 228, 211, 0.32);
+  --accent: #93b583;
+  --accent-hover: #a6c696;
+  --accent-ink: #11200f;
+  --accent-soft: rgba(147, 181, 131, 0.16);
+  --danger: #e08a7a;
+  --focus: #e8c06a;
+  --shadow-soft: 0 12px 30px -18px rgba(0, 0, 0, 0.8);
+}
